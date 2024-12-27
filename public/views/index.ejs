@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <ul class="messagesList">
+      <% messages.map((message) => { %>
+
+      <li>
+        <div class="message">
+          <h1><%= message.user %></h1>
+          <p><%= message.text %></p>
+          <p><%= message.added.toLocaleDateString("en-US") %></p>
+        </div>
+      </li>
+      <% }) %>
+    </ul>
+    <a href="/new"><button class="newPostButton">New Post</button></a>
+  </body>
+</html>
